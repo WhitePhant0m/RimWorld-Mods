@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Industrial tab go yeet</name>
+  <author>White_Phant0m</author>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.3</li>
+  </supportedVersions>
+  <packageId>wphant0m.patch.yeetindustrial</packageId>
+  <loadAfter>
+    <li>spdskatr.projectrimfactory</li>
+    <li>oskarpotocki.vfe.mechanoid</li>
+  </loadAfter>
+  <description>Patches PRF industrial tab contents to go over to VFE - Mechanoids factory tab.
+    Made this since I use the lite version of PRF with VFE - Mechanoids and got annoyed by the logistics things being in a different tab.
+  Should work with all RW versions since this is just a simple XML patch, dunno, didn't test others than 1.3</description>
+  <modDependencies>
+    <li>
+      <packageId>spdskatr.projectrimfactory</packageId>
+      <displayName>Project RimFactory Revived</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2033979700</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VFE.Mechanoid</packageId>
+      <displayName>Vanilla Factions Expanded - Mechanoids</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+</ModMetaData>
