@@ -11,9 +11,7 @@
     <li>latta.infusion</li>
     <li>jemlpro.Infusion2Expansion</li>
   </loadAfter>
-  <description>
-    Saw someone wanting the money increase from infusions gone, so, I removed it.
-  </description>
+  <description>Saw someone wanting the money increase from infusions gone, so, I removed it.</description>
   <modDependencies>
     <li>
       <packageId>latta.infusion</packageId>
