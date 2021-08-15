@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Android Tiers -->
+  <Operation Class="PatchOperation.FindModByID">
+    <mods>
+      <li>atlas.androidtiers</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/mentalStateGivers</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/hungerRateFactorOffset</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/statOffsets/MentalBreakThreshold</xpath>
+        </li>
+        <!--
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/maxSeverity</xpath>
+        <value>
+          <maxSeverity>1.05</maxSeverity>
+        </value>
+      </li>
+      -->
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Medieval Overhaul -->
+  <Operation Class="PatchOperation.FindModByID">
+    <mods>
+      <li>DankPyon.Medieval.Overhaul</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName = "DankPyon_IronIngot"]/stuffProps/statFactors/Flammability</xpath>
+          <value>
+            <Flammability>0.0</Flammability>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Run & Hide -->
+  <Operation Class="PatchOperation.FindModByID">
+    <mods>
+      <li>mlie.runandhide</li>
+    </mods>
+    <match Class="PatchOperationInsert">
+      <xpath>/Defs/ThingDef[defName="BunkerSpot"]/canOverlapZones</xpath>
+      <value>
+        <canOverlapZones>True</canOverlapZones>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- Deep Stroage
+  <Operation Class="PatchOperation.FindModByID">
+    <mods>
+      <li>lwm.deepstorage</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef/comps/li/maxTotalMass</xpath>
+    </match>
+  </Operation> -->
+</Patch>

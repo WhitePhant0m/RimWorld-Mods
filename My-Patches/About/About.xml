@@ -10,6 +10,16 @@
 	<loadAfter>
 		<li>atlas.androidtiers</li>
 		<li>DankPyon.Medieval.Overhaul</li>
+    <li>mlie.runandhide</li>
+    <li>lwm.deepstorage</li>
 	</loadAfter>
   <description>Couple patches for a couple mods.</description>
+  <!--
+  <modDependencies>
+		<li>
+			<packageId>ccl.patchoperation.highlander</packageId>
+			<displayName>PatchOperationHighlander</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2552002158</steamWorkshopUrl>
+		</li>
+  </modDependencies>-->
 </ModMetaData>

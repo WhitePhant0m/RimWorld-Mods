@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>WP_Doors</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>WP_Walls</defName>
+  </DesignatorDropdownGroupDef>
+
+</Defs>
