@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Patch>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName = "NeuralSupercharger"]/comp/li[@Class = "CompProperties_NeuralSupercharger"]/ticksToRecharge</xpath>
-    <value>
-      <ticksToRecharge>60000</ticksToRecharge>
-    </value>
-  </Operation>
-</Patch>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="XmlExtensions.UseSetting">
+    <modId>wpConfigurableNeuralSupercharger</modId>
+    <key>cdticks</key>
+    <defaultValue>30000</defaultValue>
+    <apply>
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName = "NeuralSupercharger"]/comps/li[@Class = "CompProperties_NeuralSupercharger"]/ticksToRecharge</xpath>
+        <value>
+          <ticksToRecharge>{cdticks}</ticksToRecharge>
+        </value>
+      </Operation>
+    </apply>
+  </Operation>
+  <Operation Class="XmlExtensions.UseSetting">
+    <modId>wpConfigurableNeuralSupercharger</modId>
+    <key>pwcost</key>
+    <defaultValue>400</defaultValue>
+    <apply>
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName = "NeuralSupercharger"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+        <value>
+          <basePowerConsumption>{pwcost}</basePowerConsumption>
+        </value>
+      </Operation>
+    </apply>
+  </Operation>
+</Patch>
