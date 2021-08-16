@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/HediffDef[defName="SoSHologram" or defName="SoSHologramMachine" or defName="SoSHologramArchotech"]/disablesNeeds</xpath>
+        <value>
+          <li>Rest</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

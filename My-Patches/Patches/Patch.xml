@@ -46,7 +46,7 @@
     </match>
   </Operation>
 
-  <!-- Run & Hide -->
+  <!-- Run & Hide
   <Operation Class="PatchOperation.FindModByID">
     <mods>
       <li>mlie.runandhide</li>
@@ -57,7 +57,7 @@
         <canOverlapZones>True</canOverlapZones>
       </value>
     </match>
-  </Operation>
+  </Operation>-->
 
   <!-- Deep Stroage
   <Operation Class="PatchOperation.FindModByID">

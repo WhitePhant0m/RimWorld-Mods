@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Better SoS2 holograms</name>
+  <author>White_Phant0m</author>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <packageId>wphant0m.patch.bettersos2holograms</packageId>
+  <description>I felt like the holograms shouldn't require rest since they are, well... holograms, so, I've removed their need for rest.
+
+I've kept their other needs since they were originally humanoids afterall.
+
+If there are other needs that should be removed then do let me know.</description>
+  <modDependencies>
+    <li>
+      <packageId>kentington.saveourship2</packageId>
+      <displayName>Save Our Ship 2</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1909914131</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+</ModMetaData>
