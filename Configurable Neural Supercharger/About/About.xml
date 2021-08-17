@@ -25,4 +25,7 @@ Default cooldown is 24h = 60000 ticks.
       <steamWorkshopUrl>steam://url/CommunityFilePage/2574315206</steamWorkshopUrl>
     </li>
   </modDependencies>
+  <loadAfter>
+    <li>Imranfish.XMLExtensions</li>
+  </loadAfter>
 </ModMetaData>

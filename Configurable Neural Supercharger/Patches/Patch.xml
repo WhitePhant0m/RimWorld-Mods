@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <!-- Patches -->
   <Operation Class="XmlExtensions.UseSetting">
     <modId>wpConfigurableNeuralSupercharger</modId>
     <key>cdticks</key>
     <defaultValue>30000</defaultValue>
     <apply>
+      <!-- Cooldown -->
       <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName = "NeuralSupercharger"]/comps/li[@Class = "CompProperties_NeuralSupercharger"]/ticksToRecharge</xpath>
         <value>
@@ -18,6 +20,7 @@
     <key>pwcost</key>
     <defaultValue>400</defaultValue>
     <apply>
+      <!-- Power cost -->
       <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName = "NeuralSupercharger"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
         <value>
@@ -25,5 +28,26 @@
         </value>
       </Operation>
     </apply>
+  </Operation>
+
+  <!-- Settings menu -->
+  <Operation Class="XmlExtensions.CreateSettings">
+    <modId>wpConfigurableNeuralSupercharger</modId>
+    <label>Configurable Neural Supercharger</label>
+    <settings>
+      <li Class="XmlExtensions.Setting.Textbox">
+        <key>cdticks</key>
+        <label>Ticks to recharge | 2500 ticks = 1h    </label>
+      </li>
+      <li Class="XmlExtensions.Setting.Textbox">
+        <key>pwcost</key>
+        <label>Power cost   </label>
+      </li>
+      <li Class="XmlExtensions.Setting.ResetSettings">
+        <label>Reset Settings</label>
+        <confirm>true</confirm>
+        <keys></keys>
+      </li>
+    </settings>
   </Operation>
 </Patch>

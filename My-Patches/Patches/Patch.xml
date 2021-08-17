@@ -52,20 +52,20 @@
       <li>mlie.runandhide</li>
     </mods>
     <match Class="PatchOperationInsert">
-      <xpath>/Defs/ThingDef[defName="BunkerSpot"]/canOverlapZones</xpath>
+      <xpath>/Defs/ThingDef[defName = "BunkerSpot"]/canOverlapZones</xpath>
       <value>
         <canOverlapZones>True</canOverlapZones>
       </value>
     </match>
   </Operation>-->
 
-  <!-- Deep Stroage
+  <!-- Deep Stroage -->
   <Operation Class="PatchOperation.FindModByID">
     <mods>
       <li>lwm.deepstorage</li>
     </mods>
     <match Class="PatchOperationRemove">
-      <xpath>/Defs/ThingDef/comps/li/maxTotalMass</xpath>
+      <xpath>/Defs/ThingDef/comps/li[@Class = "LWM.DeepStorage.Properties"]/maxTotalMass</xpath>
     </match>
-  </Operation> -->
+  </Operation>
 </Patch>
