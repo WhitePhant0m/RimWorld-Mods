@@ -59,7 +59,7 @@
     </match>
   </Operation>-->
 
-  <!-- Deep Stroage -->
+  <!-- Deep Storage -->
   <Operation Class="PatchOperation.FindModByID">
     <mods>
       <li>lwm.deepstorage</li>
