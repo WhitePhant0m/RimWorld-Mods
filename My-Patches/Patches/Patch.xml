@@ -122,28 +122,41 @@
     </match>
   </Operation>-->
 
-  <!-- WOOD -->
-  <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="WoodLog"]/tools</xpath>
-  </Operation>
+  <!-- Fuck these "melee" weapons -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!-- Wood -->
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="WoodLog"]/tools</xpath>
+      </li>
 
-  <Operation Class="PatchOperationAttributeSet">
-    <xpath>/Defs/ThingDef[defName="WoodLog"]</xpath>
-    <attribute>ParentName</attribute>
-    <value>ResourceBase</value>
-  </Operation>
+      <li Class="PatchOperationAttributeSet">
+        <xpath>/Defs/ThingDef[defName="WoodLog"]</xpath>
+        <attribute>ParentName</attribute>
+        <value>ResourceBase</value>
+      </li>
+      <!-- Beer -->
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
+      </li>
 
-  <!-- BEER -->
-  <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
-  </Operation>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Beer"]/comps/li[compClass="CompEquippable"]</xpath>
+      </li>
+      <!-- Fish -->
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/tools</xpath>
+      </li>
 
-  <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="Beer"]/comps/li[compClass="CompEquippable"]</xpath>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/comps/li[compClass="CompEquippable"]</xpath>
+      </li>
+    </operations>
   </Operation>
 
   <!-- Always on SunLamps -->
   <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Schedule"]/offMessage[text()="Off for plant resting period"]..</xpath>
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Schedule"]</xpath>
   </Operation>
 </Patch>
