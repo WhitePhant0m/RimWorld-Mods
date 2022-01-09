@@ -10,13 +10,7 @@
   <loadAfter>
     <li>latta.infusion</li>
     <li>jemlpro.Infusion2Expansion</li>
+    <li>notfood.infused</li>
   </loadAfter>
   <description>Saw someone wanting the money increase from infusions gone, so, I removed it.</description>
-  <modDependencies>
-    <li>
-      <packageId>latta.infusion</packageId>
-      <displayName>Infusion 2</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2063008864</steamWorkshopUrl>
-    </li>
-  </modDependencies>
 </ModMetaData>

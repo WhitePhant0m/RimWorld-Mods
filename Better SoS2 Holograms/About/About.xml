@@ -18,4 +18,8 @@ If there are other needs that should be removed then do let me know.</descriptio
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1909914131</steamWorkshopUrl>
     </li>
   </modDependencies>
+  <loadAfter>
+    <li>kentington.saveourship2</li>
+    <li>sprocket.moreholograms</li>
+  </loadAfter>
 </ModMetaData>
