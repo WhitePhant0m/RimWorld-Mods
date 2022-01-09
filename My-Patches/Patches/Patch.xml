@@ -18,13 +18,13 @@
           <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/statOffsets/MentalBreakThreshold</xpath>
         </li>
         <!--
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/maxSeverity</xpath>
-        <value>
-          <maxSeverity>1.05</maxSeverity>
-        </value>
-      </li>
-      -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/maxSeverity</xpath>
+            <value>
+              <maxSeverity>1.05</maxSeverity>
+            </value>
+          </li>
+        -->
       </operations>
     </match>
   </Operation>
@@ -46,18 +46,20 @@
     </match>
   </Operation>
 
-  <!-- Run & Hide
-  <Operation Class="PatchOperation.FindModByID">
-    <mods>
-      <li>mlie.runandhide</li>
-    </mods>
-    <match Class="PatchOperationInsert">
-      <xpath>/Defs/ThingDef[defName = "BunkerSpot"]/canOverlapZones</xpath>
-      <value>
-        <canOverlapZones>True</canOverlapZones>
-      </value>
-    </match>
-  </Operation>-->
+  <!-- Run & Hide -->
+  <!--
+    <Operation Class="PatchOperation.FindModByID">
+      <mods>
+        <li>mlie.runandhide</li>
+      </mods>
+      <match Class="PatchOperationInsert">
+        <xpath>/Defs/ThingDef[defName = "BunkerSpot"]/canOverlapZones</xpath>
+        <value>
+          <canOverlapZones>True</canOverlapZones>
+        </value>
+      </match>
+    </Operation>
+  -->
 
   <!-- Deep Storage -->
   <Operation Class="PatchOperation.FindModByID">
@@ -76,87 +78,124 @@
     </match>
   </Operation>
 
-  <!-- Quality Doors fixes
-  <Operation Class="PatchOperation.FindModByID">
-    <mods>
-      <li>stevezero.qualitydoors</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <Operation Class="PatchOperation.FindModByID">
-          <mods>
-            <li>jecrell.doorsexpanded</li>
-          </mods>
-          <match Class="PatchOperationSequence">
-            <operations>
-              <li Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[@Name="HeronDoorBase"]</xpath>
-                <value>
-                  <minifiedDef>MinifiedThing</minifiedDef>
-                  <thingCategories>
-                    <li>Buildings</li>
-                  </thingCategories>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[@Name="HeronDoorBase"]</xpath>
-                <value>
-                  <statBases>
-                    <Mass>75</Mass>
-                  </statBases>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[@Name="AbstractHeronDoorBase"]/comps</xpath>
-                <value>
-                  <li>
-                    <compClass>CompQuality</compClass>
-                  </li>
-                </value>
-              </li>
-            </operations>
-          </match>
-        </Operation>
-      </operations>
-    </match>
-  </Operation>-->
+  <!-- Quality Doors fixes -->
+  <!--
+    <Operation Class="PatchOperation.FindModByID">
+      <mods>
+        <li>stevezero.qualitydoors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <Operation Class="PatchOperation.FindModByID">
+            <mods>
+              <li>jecrell.doorsexpanded</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+              <operations>
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[@Name="HeronDoorBase"]</xpath>
+                  <value>
+                    <minifiedDef>MinifiedThing</minifiedDef>
+                    <thingCategories>
+                      <li>Buildings</li>
+                    </thingCategories>
+                  </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[@Name="HeronDoorBase"]</xpath>
+                  <value>
+                    <statBases>
+                      <Mass>75</Mass>
+                    </statBases>
+                  </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[@Name="AbstractHeronDoorBase"]/comps</xpath>
+                  <value>
+                    <li>
+                      <compClass>CompQuality</compClass>
+                    </li>
+                  </value>
+                </li>
+              </operations>
+            </match>
+          </Operation>
+        </operations>
+      </match>
+    </Operation>
+  -->
 
   <!-- Fuck these "melee" weapons -->
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <!-- Wood -->
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="WoodLog"]/tools</xpath>
-      </li>
+  <!--
+    <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName="WoodLog"]/tools</xpath>
+        </li>
 
-      <li Class="PatchOperationAttributeSet">
-        <xpath>/Defs/ThingDef[defName="WoodLog"]</xpath>
-        <attribute>ParentName</attribute>
-        <value>ResourceBase</value>
-      </li>
-      <!-- Beer -->
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
-      </li>
+        <li Class="PatchOperationAttributeSet">
+          <xpath>/Defs/ThingDef[defName="WoodLog"]</xpath>
+          <attribute>ParentName</attribute>
+          <value>ResourceBase</value>
+        </li>
 
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="Beer"]/comps/li[compClass="CompEquippable"]</xpath>
-      </li>
-      <!-- Fish -->
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/tools</xpath>
-      </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
+        </li>
 
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/comps/li[compClass="CompEquippable"]</xpath>
-      </li>
-    </operations>
-  </Operation>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName="Beer"]/comps/li[compClass="CompEquippable"]</xpath>
+        </li>
+
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/tools</xpath>
+        </li>
+
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/comps/li[compClass="CompEquippable"]</xpath>
+        </li>
+      </operations>
+    </Operation>
+  -->
 
   <!-- Always on SunLamps -->
   <Operation Class="PatchOperationRemove">
     <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Schedule"]</xpath>
   </Operation>
+
+  <!-- Some "fixes" to recipes to use correct work speeds -->
+  <Operation Class="PatchOperation.FindModByID">
+    <mods>
+      <li>alias.degeneralizework</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!-- CE Melee fix -->
+        <li Class="PatchOperation.FindModByID">
+          <mods>
+            <li>ceteam.combatextendedmelee</li>
+          </mods>
+          <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="MeleeWeaponMakeable_CE"]/workSpeedStat</xpath>
+            <value>
+              <workSpeedStat>SmithingSpeed</workSpeedStat>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Not so filthy animals -->
+  <!--
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[contains(defName="AA_")]/statBases/FilthRate</xpath>
+      <value>
+        <FilthRate>1</FilthRate>
+      </value>
+    </Operation>
+  -->
 </Patch>
