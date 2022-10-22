@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/HediffDef[defName="SoSHologram" or defName="SoSHologramMachine" or defName="SoSHologramArchotech"]/disablesNeeds</xpath>
+    <xpath>Defs/HediffDef[defName="SoSHologram" or defName="SoSHologramMachine" or defName="SoSHologramArchotech"]/disablesNeeds</xpath>
     <value>
       <li>Rest</li>
     </value>
@@ -12,7 +12,7 @@
       <li>More Holograms</li>
     </mods>
     <match Class="PatchOperationAdd">
-      <xpath>/Defs/HediffDef[defName="MH_HologramMachine" or defName="MH_HologramArchotech" or defName="SoSHologramMachinePotato"]/disablesNeeds</xpath>
+      <xpath>Defs/HediffDef[defName="MH_HologramMachine" or defName="MH_HologramArchotech" or defName="SoSHologramMachinePotato"]/disablesNeeds</xpath>
       <value>
         <li>Rest</li>
       </value>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <XmlExtensions.SettingsMenuDef>
+    <defName>wphant0m_CNS</defName>
+    <modId>wphant0m.CNS</modId>
+    <label>Configurable Neural Supercharger</label>
+    <settings>
+      <li Class="XmlExtensions.Setting.Textbox">
+        <key>cdticks</key>
+        <label>Ticks to recharge | 2500 ticks = 1h</label>
+        <defaultValue>30000</defaultValue>
+      </li>
+      <li Class="XmlExtensions.Setting.Textbox">
+        <key>pwcost</key>
+        <label>Power cost</label>
+        <defaultValue>400</defaultValue>
+      </li>
+      <li Class="XmlExtensions.Setting.ResetSettings">
+        <label>Reset Settings</label>
+        <keys>
+          <li>cdticks</li>
+          <li>pwcost</li>
+        </keys>
+      </li>
+    </settings>
+  </XmlExtensions.SettingsMenuDef>
+</Defs>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
   <!-- Android Tiers -->
@@ -9,17 +9,17 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/mentalStateGivers</xpath>
+          <xpath>Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/mentalStateGivers</xpath>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/hungerRateFactorOffset</xpath>
+          <xpath>Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/hungerRateFactorOffset</xpath>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/statOffsets/MentalBreakThreshold</xpath>
+          <xpath>Defs/HediffDef[defName = "FractalPillAndroid"]/stages/li/statOffsets/MentalBreakThreshold</xpath>
         </li>
         <!--
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/HediffDef[defName = "FractalPillAndroid"]/maxSeverity</xpath>
+            <xpath>Defs/HediffDef[defName = "FractalPillAndroid"]/maxSeverity</xpath>
             <value>
               <maxSeverity>1.05</maxSeverity>
             </value>
@@ -37,7 +37,7 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName = "DankPyon_IronIngot"]/stuffProps/statFactors/Flammability</xpath>
+          <xpath>Defs/ThingDef[defName = "DankPyon_IronIngot"]/stuffProps/statFactors/Flammability</xpath>
           <value>
             <Flammability>0.0</Flammability>
           </value>
@@ -53,7 +53,7 @@
         <li>mlie.runandhide</li>
       </mods>
       <match Class="PatchOperationInsert">
-        <xpath>/Defs/ThingDef[defName = "BunkerSpot"]/canOverlapZones</xpath>
+        <xpath>Defs/ThingDef[defName = "BunkerSpot"]/canOverlapZones</xpath>
         <value>
           <canOverlapZones>True</canOverlapZones>
         </value>
@@ -69,10 +69,10 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef/comps/li[@Class = "LWM.DeepStorage.Properties"]/maxTotalMass</xpath>
+          <xpath>Defs/ThingDef/comps/li[@Class = "LWM.DeepStorage.Properties"]/maxTotalMass</xpath>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef/comps/li[@Class = "LWM.DeepStorage.Properties"]/maxMassOfStoredItem</xpath>
+          <xpath>Defs/ThingDef/comps/li[@Class = "LWM.DeepStorage.Properties"]/maxMassOfStoredItem</xpath>
         </li>
       </operations>
     </match>
@@ -132,29 +132,29 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef[defName="WoodLog"]/tools</xpath>
+          <xpath>Defs/ThingDef[defName="WoodLog"]/tools</xpath>
         </li>
 
         <li Class="PatchOperationAttributeSet">
-          <xpath>/Defs/ThingDef[defName="WoodLog"]</xpath>
+          <xpath>Defs/ThingDef[defName="WoodLog"]</xpath>
           <attribute>ParentName</attribute>
           <value>ResourceBase</value>
         </li>
 
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
+          <xpath>Defs/ThingDef[defName="Beer"]/tools</xpath>
         </li>
 
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef[defName="Beer"]/comps/li[compClass="CompEquippable"]</xpath>
+          <xpath>Defs/ThingDef[defName="Beer"]/comps/li[compClass="CompEquippable"]</xpath>
         </li>
 
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/tools</xpath>
+          <xpath>Defs/ThingDef[contains(defName="VCEF_Raw")]/tools</xpath>
         </li>
 
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef[contains(defName="VCEF_Raw")]/comps/li[compClass="CompEquippable"]</xpath>
+          <xpath>Defs/ThingDef[contains(defName="VCEF_Raw")]/comps/li[compClass="CompEquippable"]</xpath>
         </li>
       </operations>
     </Operation>
@@ -162,7 +162,7 @@
 
   <!-- Always on SunLamps -->
   <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Schedule"]</xpath>
+    <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Schedule"]</xpath>
   </Operation>
 
   <!-- Some "fixes" to recipes to use correct work speeds -->
@@ -179,7 +179,7 @@
             <li>ceteam.combatextendedmelee</li>
           </mods>
           <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[@Name="MeleeWeaponMakeable_CE"]/workSpeedStat</xpath>
+            <xpath>Defs/ThingDef[@Name="MeleeWeaponMakeable_CE"]/workSpeedStat</xpath>
             <value>
               <workSpeedStat>SmithingSpeed</workSpeedStat>
             </value>
@@ -192,10 +192,31 @@
   <!-- Not so filthy animals -->
   <!--
     <Operation Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[contains(defName="AA_")]/statBases/FilthRate</xpath>
+      <xpath>Defs/ThingDef[contains(defName="AA_")]/statBases/FilthRate</xpath>
       <value>
         <FilthRate>1</FilthRate>
       </value>
     </Operation>
   -->
+
+  <!-- Pruning uses plant work speed + Psy sens-->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/StatDef[defName="PruningSpeed"]/skillNeedFactors</xpath>
+      </li>
+
+      <li Class="PatchOperationInsert">
+        <xpath>Defs/StatDef[defName="PruningSpeed"]</xpath>
+        <value>
+          <statFactors>
+            <li>PsychicSensitivity</li>
+            <li>PlantWorkSpeed</li>
+          </statFactors>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
 </Patch>

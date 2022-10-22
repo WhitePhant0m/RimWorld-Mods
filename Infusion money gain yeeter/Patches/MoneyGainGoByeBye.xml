@@ -5,15 +5,16 @@
       <li>Infusion 2</li>
     </mods>
     <match Class="PatchOperationRemove">
-      <xpath>/Defs/Infusion.InfusionDef/stats/li[key = "MarketValue"]</xpath>
+      <xpath>Defs/Infusion.InfusionDef/stats/li[key = "MarketValue"]</xpath>
     </match>
   </Operation>
+
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Infused</li>
     </mods>
     <match Class="PatchOperationRemove">
-      <xpath>/Defs/Infused.Def/stats/li[key = "MarketValue"]</xpath>
+      <xpath>Defs/Infused.Def/stats/li[key = "MarketValue"]</xpath>
     </match>
   </Operation>
 </Patch>
